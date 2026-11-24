@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 25px 20px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #38d9a9;
+  font-size: 30px;
+}
+
+header p {
+  color: #aab4c5;
+  margin-top: 8px;
+}
+
+.formulario, .lista {
+  background: #1d293b;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #38d9a9;
+  color: #102027;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.tarefa-card {
+  background: #29374c;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.tarefa-card span {
+  overflow-wrap: anywhere;
+}
+
+.tarefa-card.concluida span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.acoes {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.acoes button {
+  width: auto;
+  padding: 9px;
+  font-size: 12px;
+}
+
+.btn-excluir {
+  background: #ff6b6b;
+  color: white;
+}
+
+#mensagem {
+  color: #aab4c5;
+  margin-bottom: 12px;
+}
+
+/* Desafio: contador de pendentes */
+#contador {
+  color: #38d9a9;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Desafio: filtro de tarefas */
+.filtros {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.filtro {
+  padding: 8px;
+  font-size: 13px;
+  background: #29374c;
+  color: #aab4c5;
+}
+
+.filtro.ativo {
+  background: #38d9a9;
+  color: #102027;
+}
+
+footer {
+  text-align: center;
+  color: #8290a5;
+  font-size: 12px;
+  padding: 20px;
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 18px 12px;
+  }
+
+  .tarefa-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

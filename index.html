@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskMobile</title>
+
+<!-- PWA: manifest, cor da barra e ícone -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#101827">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+
+  <header>
+    <h1>TaskMobile</h1>
+    <p>Organize seu dia!</p>
+  </header>
+
+  <section class="formulario">
+    <h2>Nova tarefa</h2>
+    <input type="text" id="tarefa" placeholder="Digite uma tarefa...">
+    <button id="btnAdicionar">+ Adicionar tarefa</button>
+  </section>
+
+  <section class="lista">
+    <h2>Minhas tarefas</h2>
+
+    <!-- Desafio: quantidade de tarefas pendentes -->
+    <p id="contador">0 tarefas pendentes</p>
+
+    <!-- Desafio: filtro de tarefas concluídas -->
+    <div class="filtros">
+      <button class="filtro ativo" data-filtro="todas">Todas</button>
+      <button class="filtro" data-filtro="pendentes">Pendentes</button>
+      <button class="filtro" data-filtro="concluidas">Concluídas</button>
+    </div>
+
+    <div id="mensagem">Carregando tarefas...</div>
+    <div id="listaTarefas"></div>
+  </section>
+
+  <footer>
+    Desenvolvido pelos alunos de DS
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
